@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff5f7;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 36px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(190, 90, 120, 0.12);
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffe1e9;
+  color: #d94c78;
+  font-size: 32px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  color: #d94c78;
+  font-size: 32px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin: 8px 0 24px;
+}
+
+.tabs {
+  display: flex;
+  background: #fff0f4;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.tabs button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #777;
+}
+
+.tabs button.active {
+  background: white;
+  color: #d94c78;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+form label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #e5dce0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #d94c78;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 9px;
+  background: #d94c78;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.switch-text {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.switch-text button {
+  border: none;
+  background: none;
+  color: #d94c78;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  margin-top: 24px;
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.dashboard-header,
+.section-heading,
+.reading-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  text-align: left;
+}
+
+.dashboard-header p {
+  color: #777;
+  margin-top: 6px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 22px rgba(190, 90, 120, 0.1);
+}
+
+.dashboard-card h2 {
+  color: #d94c78;
+  margin-top: 0;
+}
+
+.dashboard-card form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dashboard-card form label {
+  margin-bottom: 0;
+}
+
+.dashboard-card form label:nth-child(3),
+.dashboard-card form .submit-btn {
+  grid-column: 1 / -1;
+}
+
+.dashboard-card select {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #e5dce0;
+  border-radius: 8px;
+  background: white;
+}
+
+.logout-btn,
+.refresh-btn,
+.delete-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: #ffe1e9;
+  color: #c83f6c;
+}
+
+.refresh-btn {
+  background: #fff0f4;
+  color: #c83f6c;
+}
+
+.reading-list {
+  display: grid;
+  gap: 12px;
+}
+
+.reading-item {
+  border: 1px solid #f0e5e9;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.reading-item p {
+  color: #777;
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background: #fff0f0;
+  color: #c0392b;
+}
+
+.message {
+  text-align: center;
+  margin-top: 14px;
+  color: #c83f6c;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .dashboard-card form {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card form label,
+  .dashboard-card form .submit-btn {
+    grid-column: auto;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+  }
+}
+
+.report-result {
+  margin-top: 20px;
+  padding: 18px;
+  background: #fff5fa;
+  border: 1px solid #f3d5e5;
+  border-radius: 12px;
+}
+
+.report-result h3 {
+  margin-top: 0;
+  color: #b83275;
+}
+
+.report-result p {
+  margin: 8px 0;
+  color: #444;
+}
